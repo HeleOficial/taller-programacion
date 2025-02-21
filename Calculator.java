@@ -4,13 +4,10 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Solicitar los números y la operación al usuario
         System.out.print("Enter first number: ");
         String enterNum1 = scanner.nextLine();
-
         System.out.print("Enter operation (+, -, *, /, %): ");
         String operation = scanner.nextLine();
-
         System.out.print("Enter second number: ");
         String enterNum2 = scanner.nextLine();
 
@@ -18,8 +15,7 @@ public class Calculator {
             float num1 = Float.parseFloat(enterNum1);
             float num2 = Float.parseFloat(enterNum2);
             float result = 0;
-
-            // Usar switch-case para manejar las operaciones
+            
             switch (operation) {
                 case "+":
                     result = num1 + num2;
@@ -51,7 +47,6 @@ public class Calculator {
                     return;
             }
 
-            // Mostrar el resultado en la consola
             System.out.println("The answer is: " + result);
 
         } catch (NumberFormatException e) {
