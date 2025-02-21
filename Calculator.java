@@ -1,56 +1,49 @@
 import java.util.Scanner;
 
-public class Calculator {
+public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter first number: ");
-        String enterNum1 = scanner.nextLine();
-        System.out.print("Enter operation (+, -, *, /, %): ");
-        String operation = scanner.nextLine();
-        System.out.print("Enter second number: ");
-        String enterNum2 = scanner.nextLine();
 
-        try {
-            float num1 = Float.parseFloat(enterNum1);
-            float num2 = Float.parseFloat(enterNum2);
-            float result = 0;
-            
-            switch (operation) {
-                case "+":
-                    result = num1 + num2;
-                    break;
-                case "-":
-                    result = num1 - num2;
-                    break;
-                case "*":
-                    result = num1 * num2;
-                    break;
-                case "/":
-                    if (num2 != 0) {
-                        result = num1 / num2;
-                    } else {
-                        System.out.println("Error: Division by zero is not allowed.");
-                        return;
-                    }
-                    break;
-                case "%":
-                    if (num2 != 0) {
-                        result = num1 % num2;
-                    } else {
-                        System.out.println("Error: Modulo by zero is not allowed.");
-                        return;
-                    }
-                    break;
-                default:
-                    System.out.println("Invalid operation");
-                    return;
-            }
+        System.out.println("Seleccione una operación:");
+        System.out.println("1. Suma");
+        System.out.println("2. Resta");
+        System.out.println("3. Multiplicación");
+        System.out.println("4. División");
 
-            System.out.println("The answer is: " + result);
+        int opcion = scanner.nextInt();
 
-        } catch (NumberFormatException e) {
-            System.out.println("Error: Please enter valid numbers.");
+        System.out.println("Ingrese el primer número:");
+        double num1 = scanner.nextDouble();
+
+        System.out.println("Ingrese el segundo número:");
+        double num2 = scanner.nextDouble();
+
+        double resultado = 0;
+
+        switch (opcion) {
+            case 1:
+                resultado = num1 + num2;
+                break;
+            case 2:
+                resultado = num1 - num2;
+                break;
+            case 3:
+                resultado = num1 * num2;
+                break;
+            case 4:
+                if (num2 == 0) {
+                    System.out.println("No se puede dividir por cero.");
+                } else {
+                    resultado = num1 / num2;
+                }
+                break;
+            default:
+                System.out.println("Opción inválida.");
+        }
+
+        if (opcion >= 1 && opcion <= 4) {
+            System.out.println("El resultado es: " + resultado);
         }
 
         scanner.close();
