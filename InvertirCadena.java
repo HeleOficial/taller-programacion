@@ -1,16 +1,8 @@
-import java.util.Scanner;
-
-public class InvertirCadena {
+public class InvertiCadena {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Ingrese una cadena de texto: ");
-        String texto = scanner.nextLine();
-        
-        String textoInvertido = new StringBuilder(texto).reverse().toString();
-
-        System.out.println("Cadena invertida: " + textoInvertido);
-        
-        scanner.close();
+        String cadena = "Hola Mundo";
+        String cadenaInvertida = new StringBuilder(cadena).reverse().toString();
+        System.out.println("Cadena original: " + cadena);
+        System.out.println("Cadena invertida: " + cadenaInvertida);
     }
 }
