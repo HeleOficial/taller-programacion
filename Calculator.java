@@ -53,6 +53,6 @@ public class Calculator {
             System.out.println("Error: Please enter valid numbers.");
         }
 
-        scanner.close(); // Cerrar el Scanner
+        scanner.close();
     }
 }
