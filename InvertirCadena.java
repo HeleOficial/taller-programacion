@@ -1,4 +1,4 @@
-public class InvertiCadena {
+public class Main {
     public static void main(String[] args) {
         String cadena = "Pin pom es un muñeco muy guapo y de carton";
         String cadenaInvertida = new StringBuilder(cadena).reverse().toString();
