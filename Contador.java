@@ -1,4 +1,4 @@
-public class contador {
+public class Main {
 
     public static void main(String[] args) {
         String texto = "Embeces la vida no es como yo quisiera.";
