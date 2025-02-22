@@ -1,7 +1,7 @@
 public class contador {
 
     public static void main(String[] args) {
-        String texto = "Hola mundo, este es un texto de prueba.";
+        String texto = "Embeces la vida no es como yo quisiera.";
         int contadorVocales = 0;
         int contadorConsonantes = 0;
         for (char caracter : texto.toCharArray()) {
