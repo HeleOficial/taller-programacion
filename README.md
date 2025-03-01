@@ -21,6 +21,7 @@ public class EjemploIfElse {
 }
 
  switch: Se usa cuando hay múltiples opciones posibles. 
+
 public class EjemploSwitch {
     public static void main(String[] args) {
         int dia = 3;
@@ -34,6 +35,7 @@ public class EjemploSwitch {
 }
 
  Bucles (for, while, do-while): Se utilizan para repetir instrucciones. 
+
 public class EjemploFor {
     public static void main(String[] args) {
         for (int i = 1; i <= 5; i++) {
